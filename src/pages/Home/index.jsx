@@ -5,11 +5,12 @@ import './styles.css'
 const Home = () => {
     return (
         <div id="Home">
-
             <div className="Text-Home">
                 <h4>Veja os filmes mais populares!</h4>
             </div>
-            <ListarFilmes />
+            <div style={{ width: '100%', marginLeft: '9%' }}>
+                <ListarFilmes />
+            </div>
         </div>
     );
 }

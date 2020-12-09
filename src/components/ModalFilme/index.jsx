@@ -1,5 +1,5 @@
 import React, { useState } from 'react'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Col, Row } from 'reactstrap';
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Col, Row } from 'reactstrap'
 
 const ModalFilme = (props) => {
     const { poster, title, overview, releaseData, genre } = props
@@ -22,7 +22,7 @@ const ModalFilme = (props) => {
                         </Col>
                     </Row>
                     <div>
-                        <h6>Data de lançamento:<strong className="ml-3">{releaseData}</strong></h6>
+                        <h6 className="Text-Card-Ano">Data de lançamento:<strong className="ml-3">{releaseData}</strong></h6>
                     </div>
                 </ModalBody>
                 <ModalFooter>

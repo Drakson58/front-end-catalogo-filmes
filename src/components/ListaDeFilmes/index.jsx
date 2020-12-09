@@ -18,7 +18,7 @@ const ListarFilmes = () => {
     }, [])
 
     return (
-        <Row className="">
+        <Row>
             {filmes?.map(filme => (
                 <CorpoCard
                     poster={filme.poster_path}
