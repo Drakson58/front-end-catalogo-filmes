@@ -1,8 +1,7 @@
 import React, { useState } from 'react'
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Col, Row } from 'reactstrap'
 
-const ModalFilme = (props) => {
-    const { poster, title, overview, releaseData, genre } = props
+const ModalFilme = ({ poster, title, overview, releaseData }) => {
 
     const [modal, setModal] = useState(false);
     const toggle = () => setModal(!modal);
@@ -10,7 +9,7 @@ const ModalFilme = (props) => {
     return (
         <div>
             <Button color="success" onClick={toggle}>Detalhes</Button>
-            <Modal isOpen={modal} toggle={toggle}>
+            <Modal isOpen={modal}>
                 <ModalHeader toggle={toggle}>{title}</ModalHeader>
                 <ModalBody>
                     <Row>
