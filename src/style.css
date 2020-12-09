@@ -1,0 +1,9 @@
+:root {
+    --main-color: #00FFCC;
+    --secondary-color: #223066;
+    --tertiary-color: #FFD1A8;
+    --contrast-color: #2C2929;
+    --white-color: #ffffff;
+    font-size: 16px;
+    text-align: center;
+}
