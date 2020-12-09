@@ -18,7 +18,14 @@ const CorpoCard = ({ poster, title, overview, releaseData }) => {
                     <CardSubtitle tag="h6" className="mb-2 text-muted">
                         <strong>Data de lançamento:</strong>    {releaseData}
                     </CardSubtitle>
-
+                    {/**
+                     * Existe duas formas de fazer a exibição dos detalhes
+                     * 
+                     * 1 - Passando os dados vias props para o modal e exibindo os dados (Como estou fazendo)
+                     * 
+                     * 2 - Passar o id para dentro do modal e lá fazer a request para a rota -> detalhes-filme/{id}
+                     * obs: Não escolhi essa opção, pois, seria desnecessário fazer mais uma request, tendo em vista que já tem esses dados.
+                     */}
                     <ModalFilme
                         poster={poster}
                         title={title}
