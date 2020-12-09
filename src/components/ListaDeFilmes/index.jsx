@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { axiosApi } from '../../services/axiosinstance';
 
-const Main = () => {
+const ListarFilmes = () => {
     
     useEffect(() => {
         const load = async () => {
@@ -12,11 +12,10 @@ const Main = () => {
     }, [])
 
     return (
-        <div className="main-header ">
-
-
+        <div>
+            teste
         </div> 
     );
 }
 
-export default Main;
+export default ListarFilmes;
