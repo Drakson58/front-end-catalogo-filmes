@@ -1,0 +1,15 @@
+#Home {
+    background: #0b2541;
+}
+
+.Text-Home {
+    text-align: center;
+}
+
+.Text-Home h4{
+    font-size: 2em;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    
+}
