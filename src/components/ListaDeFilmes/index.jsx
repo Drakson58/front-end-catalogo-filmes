@@ -24,26 +24,34 @@ const ListarFilmes = () => {
     }
 
     return (
-        <Fragment>
-            <input
-                type="text"
-                onChange={buscarFilme}
-                value={textoFiltrado}
-            />
+        <div>
+            <div className="text-right mr-5">
+                <label className="text-white mr-3 Text-Busca-Filmes">Buscar filmes:</label>
+                <input
+                    className="Input-Pesquisa-filme"
+                    type="text"
+                    onChange={buscarFilme}
+                    placeholder="Digite o nome do filme..."
+                    value={textoFiltrado}
+                />
+            </div>
             <Row>
-
                 {filmes?.map(filme => {
-                    return (filme.title.toUpperCase().includes(textoFiltrado.toUpperCase())) && (
-                        <CorpoCard
-                            poster={filme.poster_path}
-                            title={filme.title}
-                            overview={filme.overview}
-                            releaseData={filme.release_date}
-                        />
-                    )
+                    return (filme.title.toUpperCase().includes(textoFiltrado.toUpperCase())) ?  (
+                        <Fragment>
+                            {console.log('Filmes dados', filme, 'FilmesFiltrados', textoFiltrado)}
+                            <CorpoCard
+                                key={filme.id}
+                                poster={filme.poster_path}
+                                title={filme.title}
+                                overview={filme.overview}
+                                releaseData={filme.release_date}
+                            />
+                        </Fragment>
+                    ) : <div style={{height: '1200px' }} />
                 })}
             </Row>
-        </Fragment>
+        </div>
     );
 }
 

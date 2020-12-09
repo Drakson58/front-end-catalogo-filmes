@@ -1,0 +1,18 @@
+.Text-Busca-Filmes {
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1;
+    color: #fff;
+}
+
+.Input-Pesquisa-filme {
+    width: 20%;
+    height: 46px;
+    line-height: 46px;
+    font-size: 1.1em;
+    color: rgba(0,0,0,0.5);
+    border: none;
+    border-radius: 30px;
+    padding: 10px 20px;
+    outline: none;
+}

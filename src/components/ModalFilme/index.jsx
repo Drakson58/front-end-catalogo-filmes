@@ -1,5 +1,6 @@
 import React, { useState } from 'react'
-import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Col, Row } from 'reactstrap'
+import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Col, Row, CardSubtitle } from 'reactstrap'
+import './styles.css'
 
 const ModalFilme = ({ poster, title, overview, releaseData }) => {
 
@@ -14,15 +15,15 @@ const ModalFilme = ({ poster, title, overview, releaseData }) => {
                 <ModalBody>
                     <Row>
                         <Col sm={6}>
-                            <img src={poster} width='200'/>
+                            <img src={poster} width='200' style={{ borderRadius: '10%' }}/>
                         </Col>
                         <Col sm={6} className="Filme-Depoimento">
                             {overview}
                         </Col>
                     </Row>
-                    <div>
-                        <h6 className="Text-Card-Ano">Data de lançamento:<strong className="ml-3">{releaseData}</strong></h6>
-                    </div>
+                    <CardSubtitle tag="h6" className="mb-2 text-muted mt-3">
+                        <strong className="mr-2">Data de lançamento:</strong>{releaseData}
+                    </CardSubtitle>
                 </ModalBody>
                 <ModalFooter>
                     <Button color="danger" onClick={toggle}>Fechar</Button>
