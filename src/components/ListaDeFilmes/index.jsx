@@ -11,16 +11,9 @@ const ListarFilmes = () => {
     const [filmes, setFilmes] = useState([])
     const [textoFiltrado, setTextoFiltrado] = useState("")
 
-    function ordenaFilmes (filmes) {
-        filmes.sort(function (a, b) {
-            return (a.title > b.title) ? 1 : ((b.nome > a.title) ? -1 : 0);    
-        });
-    }
-
     useEffect(() => {
         const load = async () => {
             const response = await axiosApi.get(`filmes-populares/${pagina}`)
-            var filmes =  ordenaFilmes(response.data)
             setFilmes(response.data)
         }
         load()
